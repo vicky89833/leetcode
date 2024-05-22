@@ -20,7 +20,7 @@ public:
             
             return ;
         }
-         dp[idx][amount] = temp ;
+         
         f( coins , amount  , idx + 1 , result , temp , dp );
         
         // int take =0 ;
@@ -30,7 +30,7 @@ public:
             temp = temp -1 ;
         }
         
-        
+       dp[idx][amount] = temp ; 
     }
     int coinChange(vector<int>& coins, int amount) {
         int result = INT_MAX ;
